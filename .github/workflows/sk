@@ -1,0 +1,1165 @@
+`html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaHaven | Premium Private Pool & Lounge</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ocean: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#06b6d4',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .pool-gradient { background: linear-gradient(135deg, #075985 0%, #0284c7 50%, #06b6d4 100%); }
+        .glass-nav { background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(12px); }
+        .mosaic-bg {
+            background-color: #0284c7;
+            background-image: radial-gradient(#38bdf8 1px, transparent 1px), radial-gradient(#0369a1 1px, #0284c7 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-ocean-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-2xl pool-gradient flex items-center justify-center text-white shadow-md shadow-ocean-500/20 group-hover:scale-105 transition-transform">
+                    <i data-lucide="waves" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold text-slate-900 tracking-tight block leading-tight">AquaHaven</span>
+                    <span class="text-xs font-semibold text-ocean-600 tracking-wider uppercase">Private Pool & Lounge</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#about" class="hover:text-ocean-600 transition-colors">Overview</a>
+                <a href="#amenities" class="hover:text-ocean-600 transition-colors">Amenities</a>
+                <a href="#booking" class="hover:text-ocean-600 transition-colors">Book Private Slot</a>
+                <a href="#pricing" class="hover:text-ocean-600 transition-colors">Packages</a>
+                <a href="#rules" class="hover:text-ocean-600 transition-colors">Rules & Safety</a>
+                <a href="#reviews" class="hover:text-ocean-600 transition-colors">Reviews</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="tel:+1234567890" class="flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-ocean-600">
+                    <i data-lucide="phone" class="w-4 h-4 text-ocean-600"></i>
+                    <span>+1 (800) 555-SWIM</span>
+                </a>
+                <a href="#booking" class="bg-ocean-600 hover:bg-ocean-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-ocean-600/30 transition-all hover:shadow-ocean-600/50 hover:-translate-y-0.5">
+                    Reserve Now
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-600 font-medium">Overview</a>
+            <a href="#amenities" class="block py-2 text-slate-600 font-medium">Amenities</a>
+            <a href="#booking" class="block py-2 text-slate-600 font-medium">Book Private Slot</a>
+            <a href="#pricing" class="block py-2 text-slate-600 font-medium">Packages</a>
+            <a href="#rules" class="block py-2 text-slate-600 font-medium">Rules & Safety</a>
+            <a href="#reviews" class="block py-2 text-slate-600 font-medium">Reviews</a>
+            <a href="#booking" class="block w-full text-center bg-ocean-600 text-white font-semibold py-3 rounded-xl shadow-md">Reserve Slot</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 lg:pt-36 lg:pb-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+               
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-ocean-50 border border-ocean-200 rounded-full px-4 py-1.5 text-xs font-bold text-ocean-700 uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        100% Exclusive Private Pool Hire Available
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Your Private Urban Oasis for <span class="text-transparent bg-clip-text pool-gradient">Swim & Relaxation</span>
+                    </h1>
+
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Experience pure privacy in our temperature-controlled, sheltered lap pool. Designed with premium mosaic lining, crystal-clear UV filtration, and all-weather canopy cover for family fun, parties, and swim workouts.
+                    </p>
+
+                    <!-- Key highlights chips -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4 text-xs font-semibold text-slate-700">
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-lg border border-slate-200 shadow-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                            Private Keycard Access
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-lg border border-slate-200 shadow-sm">
+                            <i data-lucide="sun-medium" class="w-4 h-4 text-amber-500"></i>
+                            Sheltered All-Weather Deck
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-lg border border-slate-200 shadow-sm">
+                            <i data-lucide="droplets" class="w-4 h-4 text-ocean-600"></i>
+                            Triple-Filtered Crystalline Water
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3.5 py-2 rounded-lg border border-slate-200 shadow-sm">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-purple-600"></i>
+                            Sound System & Lounge Lights
+                        </div>
+                    </div>
+
+                    <!-- Call to action buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#booking" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-ocean-600 hover:bg-ocean-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-ocean-600/30 transition-all hover:scale-[1.02]">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            Check Available Slots
+                        </a>
+                        <a href="#gallery" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-semibold text-base px-6 py-4 rounded-xl border border-slate-200 shadow-sm transition-all">
+                            <i data-lucide="eye" class="w-5 h-5 text-ocean-600"></i>
+                            View Pool Specs
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="pt-6 border-t border-slate-200 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">30 Ft</p>
+                            <p class="text-xs text-slate-500 font-medium">Pool Length</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">4.5 Ft</p>
+                            <p class="text-xs text-slate-500 font-medium">Safe Uniform Depth</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900">28°C</p>
+                            <p class="text-xs text-slate-500 font-medium">Warm Water Temp</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Media / Visual Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
+                        <!-- Visual Card Header -->
+                        <div class="relative aspect-[4/3] bg-gradient-to-b from-ocean-700 to-slate-900 flex items-center justify-center p-6 text-white overflow-hidden">
+                            <!-- Simulated Pool Mosaic Texture background -->
+                            <div class="absolute inset-0 opacity-40 mosaic-bg"></div>
+                           
+                            <!-- Sheltered roof visual element -->
+                            <div class="absolute top-0 left-0 right-0 h-10 bg-slate-800/80 backdrop-blur border-b border-slate-700/50 flex items-center px-4 justify-between">
+                                <div class="flex items-center gap-2 text-xs font-semibold text-slate-300">
+                                    <i data-lucide="home" class="w-3.5 h-3.5 text-ocean-500"></i>
+                                    Sheltered Overhead Canopy
+                                </div>
+                                <span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold uppercase">Ready to Use</span>
+                            </div>
+
+                            <!-- Pool Card Interactive Highlights -->
+                            <div class="relative z-10 text-center space-y-3 mt-6">
+                                <div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mx-auto flex items-center justify-center text-cyan-300 shadow-inner">
+                                    <i data-lucide="waves" class="w-8 h-8 animate-pulse"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white">AquaHaven Main Pool</h3>
+                                <p class="text-xs text-cyan-100 max-w-xs mx-auto">Mosaic Tiled Pool Deck • Stainless Steel Safety Ladder • Ambient Overhead Lighting</p>
+                                <span class="inline-block bg-white/20 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full border border-white/30">
+                                    Capacity: Up to 12 Guests
+                                </span>
+                            </div>
+
+                            <!-- Water wave overlay -->
+                            <div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-ocean-900 to-transparent"></div>
+                        </div>
+
+                        <!-- Card Quick Details Footer -->
+                        <div class="p-6 bg-white space-y-4">
+                            <div class="flex justify-between items-center text-sm border-b border-slate-100 pb-3">
+                                <span class="text-slate-500 font-medium">Sanitation Standard</span>
+                                <span class="font-bold text-slate-800 flex items-center gap-1">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500"></i>
+                                    UV Chlorine Dual Filter
+                                </span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm border-b border-slate-100 pb-3">
+                                <span class="text-slate-500 font-medium">Booking Type</span>
+                                <span class="font-bold text-slate-800">100% Private (No Strangers)</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-slate-500 font-medium">Starting Hire Rate</span>
+                                <span class="font-extrabold text-ocean-600 text-lg">$45 / Hour</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative floating badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 flex items-center gap-3 hidden sm:flex">
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400 text-amber-400"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">4.98 / 5.0 Rating</p>
+                            <p class="text-xs text-slate-500">Based on 140+ Private Bookings</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Slot Booking & Price Estimator -->
+    <section id="booking" class="py-16 bg-slate-100/80 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-ocean-600 font-extrabold text-xs uppercase tracking-widest bg-ocean-100/60 px-3 py-1 rounded-full">Instant Reservation</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Book Your Private Pool Session</h2>
+                <p class="text-slate-600 mt-2">Select your date, duration, and preferred extra add-ons. Lock in your session instantly with zero hassle.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden grid lg:grid-cols-12">
+               
+                <!-- Booking Inputs (Left Column) -->
+                <div class="lg:col-span-7 p-6 sm:p-8 space-y-6">
+                   
+                    <!-- Step 1: Date & Time -->
+                    <div>
+                        <label class="block text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i data-lucide="calendar-days" class="w-4 h-4 text-ocean-600"></i>
+                            1. Select Date
+                        </label>
+                        <input type="date" id="bookingDate" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 font-semibold focus:ring-2 focus:ring-ocean-500 focus:outline-none">
+                    </div>
+
+                    <!-- Step 2: Time Slot -->
+                    <div>
+                        <label class="block text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-ocean-600"></i>
+                            2. Choose Time Slot
+                        </label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="slotContainer">
+                            <button type="button" class="slot-btn border-2 border-slate-200 hover:border-ocean-500 rounded-xl p-2.5 text-center transition-all text-xs font-bold text-slate-700" data-time="09:00 AM - 11:00 AM">
+                                09:00 - 11:00 AM
+                                <span class="block text-[10px] font-normal text-slate-400">Morning Refresh</span>
+                            </button>
+                            <button type="button" class="slot-btn border-2 border-slate-200 hover:border-ocean-500 rounded-xl p-2.5 text-center transition-all text-xs font-bold text-slate-700 active-slot border-ocean-600 bg-ocean-50 text-ocean-700" data-time="12:00 PM - 03:00 PM">
+                                12:00 - 03:00 PM
+                                <span class="block text-[10px] font-normal text-slate-400">Afternoon Dip</span>
+                            </button>
+                            <button type="button" class="slot-btn border-2 border-slate-200 hover:border-ocean-500 rounded-xl p-2.5 text-center transition-all text-xs font-bold text-slate-700" data-time="04:00 PM - 07:00 PM">
+                                04:00 - 07:00 PM
+                                <span class="block text-[10px] font-normal text-slate-400">Sunset Chill</span>
+                            </button>
+                            <button type="button" class="slot-btn border-2 border-slate-200 hover:border-ocean-500 rounded-xl p-2.5 text-center transition-all text-xs font-bold text-slate-700" data-time="07:30 PM - 10:30 PM">
+                                07:30 - 10:30 PM
+                                <span class="block text-[10px] font-normal text-slate-400">Night Glow</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Duration & Guests -->
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="timer" class="w-4 h-4 text-ocean-600"></i>
+                                Duration (Hours)
+                            </label>
+                            <select id="durationSelect" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 font-semibold focus:ring-2 focus:ring-ocean-500 focus:outline-none">
+                                <option value="2">2 Hours ($90)</option>
+                                <option value="3" selected>3 Hours ($135 - Popular)</option>
+                                <option value="4">4 Hours ($180)</option>
+                                <option value="6">Full Half-Day 6 Hours ($250)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                                <i data-lucide="users" class="w-4 h-4 text-ocean-600"></i>
+                                Estimated Guests
+                            </label>
+                            <select id="guestSelect" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 font-semibold focus:ring-2 focus:ring-ocean-500 focus:outline-none">
+                                <option value="1-4">1 - 4 Guests (Included)</option>
+                                <option value="5-8" selected>5 - 8 Guests (Standard)</option>
+                                <option value="9-12">9 - 12 Guests (+ $20 extra cleaner fee)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Optional Add-ons -->
+                    <div>
+                        <label class="block text-sm font-bold text-slate-800 mb-2 flex items-center gap-2">
+                            <i data-lucide="plus-circle" class="w-4 h-4 text-ocean-600"></i>
+                            Select Add-Ons
+                        </label>
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100 transition-colors">
+                                <input type="checkbox" class="addon-checkbox w-4 h-4 text-ocean-600 rounded focus:ring-ocean-500" data-price="15" data-name="Pool Inflatables & Floats">
+                                <div class="text-xs">
+                                    <span class="font-bold text-slate-800 block">Pool Floats & Toys</span>
+                                    <span class="text-slate-500">+$15 per session</span>
+                                </div>
+                            </label>
+
+                            <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100 transition-colors">
+                                <input type="checkbox" class="addon-checkbox w-4 h-4 text-ocean-600 rounded focus:ring-ocean-500" data-price="25" data-name="BBQ Grill Station Setup">
+                                <div class="text-xs">
+                                    <span class="font-bold text-slate-800 block">BBQ Grill Setup</span>
+                                    <span class="text-slate-500">+$25 per session</span>
+                                </div>
+                            </label>
+
+                            <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100 transition-colors">
+                                <input type="checkbox" class="addon-checkbox w-4 h-4 text-ocean-600 rounded focus:ring-ocean-500" data-price="20" data-name="Bluetooth Party Speaker">
+                                <div class="text-xs">
+                                    <span class="font-bold text-slate-800 block">High Power Speaker</span>
+                                    <span class="text-slate-500">+$20 per session</span>
+                                </div>
+                            </label>
+
+                            <label class="flex items-center gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-100 transition-colors">
+                                <input type="checkbox" class="addon-checkbox w-4 h-4 text-ocean-600 rounded focus:ring-ocean-500" data-price="10" data-name="Fresh Towel Service">
+                                <div class="text-xs">
+                                    <span class="font-bold text-slate-800 block">Fresh Towel Pack</span>
+                                    <span class="text-slate-500">+$10 per session</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Price Calculator Summary (Right Column) -->
+                <div class="lg:col-span-5 bg-slate-900 text-white p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+                            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                <i data-lucide="receipt" class="w-5 h-5 text-ocean-500"></i>
+                                Booking Summary
+                            </h3>
+                            <span class="text-xs bg-ocean-500/20 text-ocean-300 px-2.5 py-1 rounded-full font-bold">100% Private Hire</span>
+                        </div>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Date:</span>
+                                <span id="summaryDate" class="font-semibold text-white">Select Date</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Time Slot:</span>
+                                <span id="summaryTime" class="font-semibold text-white">12:00 PM - 03:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Duration:</span>
+                                <span id="summaryDuration" class="font-semibold text-white">3 Hours</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Guest Group:</span>
+                                <span id="summaryGuests" class="font-semibold text-white">5 - 8 Guests</span>
+                            </div>
+
+                            <div class="border-t border-slate-800 pt-4">
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2">Selected Extras</p>
+                                <ul id="summaryAddonsList" class="text-xs space-y-1.5 text-slate-300">
+                                    <li class="italic text-slate-500">No extra add-ons selected</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-800 mt-6 space-y-4">
+                        <div class="flex justify-between items-baseline">
+                            <span class="text-slate-400 font-medium">Estimated Total:</span>
+                            <span id="totalPriceDisplay" class="text-3xl font-extrabold text-cyan-400">$135</span>
+                        </div>
+
+                        <button id="openBookingModalBtn" class="w-full bg-ocean-500 hover:bg-ocean-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-ocean-500/30 transition-all text-center flex items-center justify-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            Proceed to Reserve Slot
+                        </button>
+
+                        <p class="text-[11px] text-center text-slate-400">
+                            🔒 No upfront payment required to hold date. Confirmation sent via SMS / WhatsApp.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities & Features Showcase -->
+    <section id="amenities" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-ocean-600 font-extrabold text-xs uppercase tracking-widest bg-ocean-100/60 px-3 py-1 rounded-full">Designed for Comfort</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Pool Specifications & Facilities</h2>
+                <p class="text-slate-600 mt-2">Every detail crafted to offer you a private, hygienic, and relaxing experience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+               
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-ocean-100 text-ocean-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="umbrella" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Sheltered All-Weather Roof</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Enjoy swimming regardless of harsh sun or sudden rainfall. The sturdy structural canopy keeps the water cool and comfortable all day.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="grid" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Mosaic Tiled Deck & Liner</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Premium blue mosaic finish gives the pool its signature turquoise glow and comfortable non-slip footing for swimmers.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sparkle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Advanced Water Filtration</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Continuous UV sanitation and automated filtration system guarantee crystal-clear, low-odor, skin-friendly water every single day.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="bath" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Private Changing & Shower</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Equipped with private changing rooms, hot freshwater shower, vanity mirror, and sanitized restroom amenities adjacent to the deck.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="music" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Ambient Lighting & Music</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Connect your playlist via Bluetooth to our waterproof surround sound system. Built-in LED lights make night swims magical.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl transition-all hover:-translate-y-1 group">
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Family & Beginner Safe</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Standard depth of 4.5 ft with wide stainless steel ladder entry, ideal for lap workouts, leisure floats, and beginner swim practice.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Highlights / Interactive Gallery -->
+    <section id="gallery" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-cyan-400 font-extrabold text-xs uppercase tracking-widest">Venue Highlights</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Take a Look Inside</h2>
+                </div>
+                <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0">
+                    Explore different views of our sheltered lap pool, relaxation deck, and evening mood lighting.
+                </p>
+            </div>
+
+            <!-- Gallery Cards Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+               
+                <!-- Card 1 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-800 aspect-[4/3]">
+                    <div class="absolute inset-0 mosaic-bg opacity-30"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-between">
+                        <span class="self-start text-[10px] bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold px-2.5 py-1 rounded-full uppercase">Day View</span>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">Sheltered Lap & Dip Area</h4>
+                            <p class="text-xs text-slate-300 mt-1">Rectangular 30ft layout with bright blue mosaic printed lining.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-800 aspect-[4/3]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-cyan-900 opacity-60"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-between">
+                        <span class="self-start text-[10px] bg-purple-500/20 text-purple-300 border border-purple-500/30 font-bold px-2.5 py-1 rounded-full uppercase">Night Glow</span>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">Evening Atmosphere</h4>
+                            <p class="text-xs text-slate-300 mt-1">Soft underwater lighting for romantic or party night slots.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-800 aspect-[4/3]">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-cyan-950 to-slate-800"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                    <div class="absolute inset-0 p-6 flex flex-col justify-between">
+                        <span class="self-start text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold px-2.5 py-1 rounded-full uppercase">Safety First</span>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">Easy Stainless Entry Ladder</h4>
+                            <p class="text-xs text-slate-300 mt-1">Sturdy double-handrail steps for seamless pool entry and exit.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Packages -->
+    <section id="pricing" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-ocean-600 font-extrabold text-xs uppercase tracking-widest bg-ocean-100/60 px-3 py-1 rounded-full">Transparent Rates</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Hire Packages & Subscriptions</h2>
+                <p class="text-slate-600 mt-2">Whether you need a quick 2-hour family splash or a full weekend party venue.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+               
+                <!-- Package 1 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Quick Dip</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Hourly Hire</h3>
+                        <div class="mt-4 flex items-baseline">
+                            <span class="text-4xl font-extrabold text-slate-900">$45</span>
+                            <span class="text-slate-500 text-sm ml-1">/ hour</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">Min 2 hours booking required.</p>
+
+                        <ul class="mt-8 space-y-3 text-sm text-slate-600">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                Up to 6 guests included
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                Exclusive private pool access
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                Private changing room & shower
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                Standard pool floaties
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#booking" class="mt-8 w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded-xl text-center block transition-colors">
+                        Choose Hourly
+                    </a>
+                </div>
+
+                <!-- Package 2 (Featured) -->
+                <div class="bg-slate-900 text-white rounded-3xl p-8 border-2 border-ocean-500 shadow-2xl flex flex-col justify-between relative transform lg:-translate-y-2">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-ocean-500 text-white text-[11px] font-extrabold px-4 py-1 rounded-full uppercase tracking-wider shadow-md">
+                        Most Popular
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Half Day Fun</span>
+                        <h3 class="text-2xl font-bold text-white mt-1">Family & Friends Slot</h3>
+                        <div class="mt-4 flex items-baseline">
+                            <span class="text-4xl font-extrabold text-white">$160</span>
+                            <span class="text-slate-400 text-sm ml-1">/ 4 Hours</span>
+                        </div>
+                        <p class="text-xs text-cyan-300 mt-2">Save $20 compared to hourly rate.</p>
+
+                        <ul class="mt-8 space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+                                Up to 10 guests included
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+                                Free BBQ Grill Setup
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+                                Bluetooth Surround Sound Access
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+                                Fresh Towel Service included
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#booking" class="mt-8 w-full bg-ocean-500 hover:bg-ocean-600 text-white font-bold py-3 rounded-xl text-center block transition-colors shadow-lg shadow-ocean-500/30">
+                        Book 4-Hour Pass
+                    </a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-xl transition-all">
+                    <div>
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Regular Swimmers</span>
+                        <h3 class="text-2xl font-bold text-slate-900 mt-1">Monthly Swim Pass</h3>
+                        <div class="mt-4 flex items-baseline">
+                            <span class="text-4xl font-extrabold text-slate-900">$220</span>
+                            <span class="text-slate-500 text-sm ml-1">/ month</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">Designed for solo lap practice.</p>
+
+                        <ul class="mt-8 space-y-3 text-sm text-slate-600">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                12 Solo Swimming Sessions / Mo
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                Priority Morning Slot Booking
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                Free Locker & Equipment Storage
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
+                                1 Guest Pass included per month
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#booking" class="mt-8 w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 rounded-xl text-center block transition-colors">
+                        Inquire Monthly
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules & Safety Section -->
+    <section id="rules" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-ocean-600 font-extrabold text-xs uppercase tracking-widest bg-ocean-100/60 px-3 py-1 rounded-full">Safety & Cleanliness</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Pool House Guidelines</h2>
+                <p class="text-slate-600 mt-2">To maintain a sparkling clean environment and ensure safety for all guests.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="shower-head" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base">Shower Before Entering</h4>
+                        <p class="text-xs text-slate-600 mt-1">Please take a quick freshwater rinse at the outdoor shower station prior to stepping into the pool.</p>
+                    </div>
+                </div>
+
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base">No Diving Allowed</h4>
+                        <p class="text-xs text-slate-600 mt-1">The pool depth is a uniform 4.5 feet. Head-first diving is strictly prohibited for safety.</p>
+                    </div>
+                </div>
+
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="wine-off" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base">No Glassware near Deck</h4>
+                        <p class="text-xs text-slate-600 mt-1">Only plastic or metallic drinkware is permitted around the mosaic pool border.</p>
+                    </div>
+                </div>
+
+                <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 flex gap-4 items-start">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                        <i data-lucide="baby" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base">Children Supervision</h4>
+                        <p class="text-xs text-slate-600 mt-1">Kids under 12 years must be supervised by an adult at all times while in or near the water.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guest Reviews & Testimonials -->
+    <section id="reviews" class="py-20 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-ocean-600 font-extrabold text-xs uppercase tracking-widest">Guest Feedback</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">What Swimmers Say</h2>
+                </div>
+                <button id="openReviewModalBtn" class="mt-4 md:mt-0 inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm px-5 py-2.5 rounded-xl border border-slate-300 shadow-sm transition-all">
+                    <i data-lucide="pen-square" class="w-4 h-4 text-ocean-600"></i>
+                    Write a Review
+                </button>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6" id="reviewsGrid">
+               
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic">
+                        "The pool water was exceptionally clean! Having the shelter over top meant we could swim peacefully even when it started drizzling. Total privacy!"
+                    </p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                        <div class="w-9 h-9 rounded-full bg-ocean-100 text-ocean-700 font-bold flex items-center justify-center text-sm">
+                            SR
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">Sarah & Family</p>
+                            <p class="text-[11px] text-slate-400">Booked 3-Hour Weekend Slot</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic">
+                        "Great setup for our small birthday gathering. The stainless ladder, mosaic tiling, and Bluetooth speakers gave it a luxury hotel feel."
+                    </p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-sm">
+                            MK
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">Marcus K.</p>
+                            <p class="text-[11px] text-slate-400">Evening Party Slot</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic">
+                        "I use the monthly pass for my early morning lap practice. Depth is consistent and the changing room is always spotless."
+                    </p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                        <div class="w-9 h-9 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-sm">
+                            DL
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">David L.</p>
+                            <p class="text-[11px] text-slate-400">Monthly Swim Pass Member</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-xl pool-gradient flex items-center justify-center text-white">
+                            <i data-lucide="waves" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-lg font-bold text-white">AquaHaven</span>
+                    </div>
+                    <p class="text-xs leading-relaxed text-slate-400">
+                        Private sheltered lap & lounge pool hire for swim workouts, family leisure, and small private celebrations.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-3 uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-white transition-colors">Overview</a></li>
+                        <li><a href="#amenities" class="hover:text-white transition-colors">Pool Specs</a></li>
+                        <li><a href="#booking" class="hover:text-white transition-colors">Book Online</a></li>
+                        <li><a href="#rules" class="hover:text-white transition-colors">Safety Rules</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-3 uppercase tracking-wider">Operating Hours</h4>
+                    <ul class="space-y-1.5 text-xs text-slate-400">
+                        <li>Mon - Fri: 08:00 AM - 10:00 PM</li>
+                        <li>Sat - Sun: 07:30 AM - 11:00 PM</li>
+                        <li class="text-emerald-400 font-semibold pt-1">Open All Weather (Covered Deck)</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-3 uppercase tracking-wider">Contact Host</h4>
+                    <div class="space-y-2 text-xs">
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-ocean-500"></i>
+                            124 Serenity Waters Way
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-ocean-500"></i>
+                            +1 (800) 555-SWIM
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-ocean-500"></i>
+                            booking@aquahavenpool.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>© 2026 AquaHaven Private Swimming Pool. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Confirmation Modal -->
+    <div id="bookingModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl space-y-6 relative border border-slate-200">
+            <button id="closeBookingModalBtn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                    <i data-lucide="check" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900">Complete Reservation</h3>
+                <p class="text-xs text-slate-500">Provide your contact details to receive your digital entry code.</p>
+            </div>
+
+            <form id="reservationForm" class="space-y-4 text-left">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Full Name</label>
+                    <input type="text" required placeholder="e.g. Alex Johnson" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-ocean-500 focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Mobile Number</label>
+                        <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-ocean-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
+                        <input type="email" required placeholder="alex@example.com" class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-ocean-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Special Requests or Notes (Optional)</label>
+                    <textarea rows="2" placeholder="e.g. Bringing small kids, need warm water confirmation..." class="w-full border border-slate-300 rounded-xl px-4 py-2.5 text-sm focus:ring-2 focus:ring-ocean-500 focus:outline-none"></textarea>
+                </div>
+
+                <div class="p-3 bg-ocean-50 rounded-xl border border-ocean-200 text-xs text-ocean-800 flex items-center justify-between">
+                    <span>Payable at Check-in:</span>
+                    <span id="modalFinalPrice" class="font-extrabold text-base text-ocean-700">$135</span>
+                </div>
+
+                <button type="submit" class="w-full bg-ocean-600 hover:bg-ocean-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all text-sm">
+                    Confirm & Send Access Pass
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl space-y-5 relative">
+            <button id="closeReviewModalBtn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <h3 class="text-xl font-bold text-slate-900 text-center">Share Your Experience</h3>
+
+            <form id="submitReviewForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Your Name</label>
+                    <input type="text" id="revName" required placeholder="Your name" class="w-full border border-slate-300 rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-ocean-500 focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Rating</label>
+                    <select id="revRating" class="w-full border border-slate-300 rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-ocean-500 focus:outline-none">
+                        <option value="5">⭐⭐⭐⭐⭐ (5/5 Excellent)</option>
+                        <option value="4">⭐⭐⭐⭐ (4/5 Great)</option>
+                        <option value="3">⭐⭐⭐ (3/5 Average)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Comment</label>
+                    <textarea id="revComment" rows="3" required placeholder="How was the water, privacy, and facilities?" class="w-full border border-slate-300 rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-ocean-500 focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl text-sm">
+                    Post Review
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Confirmation Toast / Alert replacement -->
+    <div id="toastMessage" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300">
+        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+        <span id="toastText" class="text-xs font-semibold">Action completed successfully!</span>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+
+            // Set default date to today
+            const dateInput = document.getElementById('bookingDate');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.value = today;
+                document.getElementById('summaryDate').textContent = today;
+            }
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Slot Buttons selection
+            const slotBtns = document.querySelectorAll('.slot-btn');
+            let selectedSlot = "12:00 PM - 03:00 PM";
+
+            slotBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    slotBtns.forEach(b => {
+                        b.classList.remove('border-ocean-600', 'bg-ocean-50', 'text-ocean-700');
+                        b.classList.add('border-slate-200');
+                    });
+                    btn.classList.remove('border-slate-200');
+                    btn.classList.add('border-ocean-600', 'bg-ocean-50', 'text-ocean-700');
+                    selectedSlot = btn.dataset.time;
+                    document.getElementById('summaryTime').textContent = selectedSlot;
+                });
+            });
+
+            // Price Calculator State
+            const durationSelect = document.getElementById('durationSelect');
+            const guestSelect = document.getElementById('guestSelect');
+            const addonCheckboxes = document.querySelectorAll('.addon-checkbox');
+
+            function updatePriceAndSummary() {
+                // Base hourly rate = $45
+                const hours = parseInt(durationSelect.value) || 3;
+                let basePrice = hours * 45;
+                if (hours === 6) basePrice = 250; // Discounted half day rate
+
+                // Guests extra fee
+                let extraGuestFee = 0;
+                if (guestSelect.value === '9-12') extraGuestFee = 20;
+
+                // Addons total
+                let addonsTotal = 0;
+                const activeAddonNames = [];
+
+                addonCheckboxes.forEach(cb => {
+                    if (cb.checked) {
+                        const price = parseInt(cb.dataset.price) || 0;
+                        addonsTotal += price;
+                        activeAddonNames.push(`${cb.dataset.name} (+$${price})`);
+                    }
+                });
+
+                const totalPrice = basePrice + extraGuestFee + addonsTotal;
+
+                // Update UI elements
+                document.getElementById('totalPriceDisplay').textContent = `$${totalPrice}`;
+                document.getElementById('modalFinalPrice').textContent = `$${totalPrice}`;
+                document.getElementById('summaryDuration').textContent = `${hours} Hours`;
+                document.getElementById('summaryGuests').textContent = guestSelect.options[guestSelect.selectedIndex].text;
+
+                // Update date
+                if (dateInput.value) {
+                    document.getElementById('summaryDate').textContent = dateInput.value;
+                }
+
+                // Update Addons List
+                const addonsListEl = document.getElementById('summaryAddonsList');
+                addonsListEl.innerHTML = '';
+                if (activeAddonNames.length === 0) {
+                    addonsListEl.innerHTML = '<li class="italic text-slate-500">No extra add-ons selected</li>';
+                } else {
+                    activeAddonNames.forEach(name => {
+                        const li = document.createElement('li');
+                        li.textContent = `• ${name}`;
+                        addonsListEl.appendChild(li);
+                    });
+                }
+            }
+
+            durationSelect.addEventListener('change', updatePriceAndSummary);
+            guestSelect.addEventListener('change', updatePriceAndSummary);
+            dateInput.addEventListener('change', updatePriceAndSummary);
+            addonCheckboxes.forEach(cb => cb.addEventListener('change', updatePriceAndSummary));
+
+            // Initial calculation
+            updatePriceAndSummary();
+
+            // Booking Modal Handling
+            const bookingModal = document.getElementById('bookingModal');
+            const openBookingModalBtn = document.getElementById('openBookingModalBtn');
+            const closeBookingModalBtn = document.getElementById('closeBookingModalBtn');
+            const reservationForm = document.getElementById('reservationForm');
+
+            openBookingModalBtn.addEventListener('click', () => {
+                bookingModal.classList.remove('hidden');
+            });
+
+            closeBookingModalBtn.addEventListener('click', () => {
+                bookingModal.classList.add('hidden');
+            });
+
+            reservationForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                bookingModal.classList.add('hidden');
+                showToast('🎉 Booking Confirmed! Entry pass sent to your phone/email.');
+                reservationForm.reset();
+            });
+
+            // Review Modal Handling
+            const reviewModal = document.getElementById('reviewModal');
+            const openReviewModalBtn = document.getElementById('openReviewModalBtn');
+            const closeReviewModalBtn = document.getElementById('closeReviewModalBtn');
+            const submitReviewForm = document.getElementById('submitReviewForm');
+
+            openReviewModalBtn.addEventListener('click', () => {
+                reviewModal.classList.remove('hidden');
+            });
+
+            closeReviewModalBtn.addEventListener('click', () => {
+                reviewModal.classList.add('hidden');
+            });
+
+            submitReviewForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('revName').value;
+                const comment = document.getElementById('revComment').value;
+
+                // Add card to grid
+                const grid = document.getElementById('reviewsGrid');
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4";
+                card.innerHTML = `
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic">"${comment}"</p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-slate-100">
+                        <div class="w-9 h-9 rounded-full bg-cyan-100 text-cyan-700 font-bold flex items-center justify-center text-sm">
+                            ${name.substring(0,2).toUpperCase()}
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-slate-900">${name}</p>
+                            <p class="text-[11px] text-slate-400">Verified Guest</p>
+                        </div>
+                    </div>
+                `;
+                grid.prepend(card);
+                lucide.createIcons();
+
+                reviewModal.classList.add('hidden');
+                showToast('Thank you! Your review has been posted.');
+                submitReviewForm.reset();
+            });
+
+            // Toast Helper
+            function showToast(message) {
+                const toast = document.getElementById('toastMessage');
+                const toastText = document.getElementById('toastText');
+                toastText.textContent = message;
+
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+
+                setTimeout(() => {
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 4000);
+            }
+        });
+    </script>
+</body>
+</html>
+``` 
